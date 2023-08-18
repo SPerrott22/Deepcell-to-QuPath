@@ -1,2 +1,2 @@
 # Deepcell-to-QuPath
-pipeline that converts Deepcell generated instance segmentation masks of nuclei from an ome-tiff to Detection Objects in QuPath
+This Pipeline connects AI-powered Cell Segmentation to open-source software to perform neighborhood analysis and clustering. Specifically, it converts Deepcell generated instance segmentation masks of nuclei from an ome-tiff to PathCellObjects in QuPath, from which a csv containing x/y coordinates and marker intensities per cell can be derived. Compare this to using QuPath's StarDist plugin.
