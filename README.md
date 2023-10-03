@@ -7,4 +7,16 @@ Prerequisites: desktop version of QuPath installed
 
 Convert CODEX-outputted multichannel tiff into one that is readable into QuPath. The CODEX outputted tiff doesn't have the required metadata for QuPath to recognize the channels. Therefore, do the following:
 
-Open the CODEX tiff in QuPath
+Open the CODEX tiff in QuPath. It should be monochrome as of now. Then open the ometiff groovy using Scripts --> Open Script Editor --> File --> Open. Run the groovy script and save the ome tiff.
+
+### Step 2: Generating AI Masks
+
+Using Google Colab with at least 75 GB CPU or a similar device, run the .ipynb with the ome tiff file. Save the mask.
+
+### Step 3: Converting Masks Into QuPath PathDetectionObjects
+
+Open the paquo .ipynb on your desktop and run with the mask and tiff files. It will open up a QuPath project with the masks read as ROIs.
+
+### Step 4: Run the Convert-to-Cells.groovy
+
+Open the .groovy in the Script Editor in QuPath via Scripts --> Open Script Editor --> File --> Open. Run the script. It will watershed expand around the nuclei and make measurements of marker intensities within the ROI regions.
