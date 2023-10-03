@@ -20,3 +20,7 @@ Open the paquo .ipynb on your desktop and run with the mask and tiff files. It w
 ### Step 4: Run the Convert-to-Cells.groovy
 
 Open the .groovy in the Script Editor in QuPath via Scripts --> Open Script Editor --> File --> Open. Run the script. It will watershed expand around the nuclei and make measurements of marker intensities within the ROI regions.
+
+### Step 5: Save the .csv and open in Python or R to perform neighborhood analysis
+
+Go to Measurements --> Export as CSV. Save this file and read in its contents into Python or R to perform clustering, neighborhood analysis, etc. visualizations! (Example to be added)
