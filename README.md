@@ -2,7 +2,9 @@
 [![jupyter](https://img.shields.io/badge/Jupyter-Lab-F37626.svg?style=flat&logo=Jupyter)](https://jupyterlab.readthedocs.io/en/stable)
 [![python](https://img.shields.io/badge/Python-3.8-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 [![tensorflow](https://img.shields.io/badge/TensorFlow-2.8.4-FF6F00.svg?style=flat&logo=tensorflow)](https://www.tensorflow.org)
-[![qupath](https://img.shields.io/badge/QuPath-v4.0-blue)](https://qupath.github.io/)
+[![qupath](https://img.shields.io/badge/QuPath-4.0-blue)](https://qupath.github.io/)
+[![paquo](https://img.shields.io/badge/PAQUO-0.7.1-purple)](https://paquo.readthedocs.io/)
+
 
 This Pipeline connects AI-powered Cell Segmentation to open-source software to perform neighborhood analysis and clustering. Specifically, it converts Deepcell generated instance segmentation masks of nuclei from an ome-tiff to PathCellObjects in QuPath, from which a csv containing x/y coordinates and marker intensities per cell can be derived. Compare this to using QuPath's StarDist plugin.
 
