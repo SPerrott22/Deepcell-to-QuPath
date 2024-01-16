@@ -1,4 +1,7 @@
 # Deepcell-to-QuPath
+[![jupyter](https://img.shields.io/badge/Jupyter-Lab-F37626.svg?style=flat&logo=Jupyter)](https://jupyterlab.readthedocs.io/en/stable)
+[![python](https://img.shields.io/badge/Python-3.8-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+
 This Pipeline connects AI-powered Cell Segmentation to open-source software to perform neighborhood analysis and clustering. Specifically, it converts Deepcell generated instance segmentation masks of nuclei from an ome-tiff to PathCellObjects in QuPath, from which a csv containing x/y coordinates and marker intensities per cell can be derived. Compare this to using QuPath's StarDist plugin.
 
 Prerequisites: desktop version of QuPath installed
