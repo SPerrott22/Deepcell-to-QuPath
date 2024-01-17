@@ -1,0 +1,4 @@
+paquo
+rasterio
+shapely
+tiffile
