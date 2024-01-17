@@ -15,7 +15,7 @@ Shoutout to the [Image.SC Forum](https://forum.image.sc/), especially Pete Bankh
 
 This pipeline connects a deep-learning powered cell segmentation model to open-source software that can perform neighborhood analysis and clustering.
 
-Using this pipeline will convert Mesmer-generated instance segmentation masks of nuclei from an fluorescence ome-tiff to PathCellObjects in QuPath with auto-generated cytoplasms, from which a csv containing x/y coordinates and marker intensities per cell can be readily downloaded via QuPath's user interface. This is basically like using QuPath's StarDist plugin but with a deep learning model.
+Using this pipeline will convert Mesmer-generated instance segmentation masks of nuclei from a fluorescence ome-tiff to PathCellObjects in QuPath with auto-generated cytoplasms, from which a csv containing x/y coordinates and marker intensities per cell can be readily downloaded via QuPath's user interface. In other words, it is like using QuPath's StarDist plugin but with a deep learning model.
 
 ## How To Use
 
