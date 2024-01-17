@@ -7,7 +7,7 @@
 [![paquo](https://img.shields.io/badge/PAQUO-0.7.1-purple)](https://paquo.readthedocs.io/)
 [![deepcell-tf](https://img.shields.io/badge/DeepCell-0.12.9-green)](https://deepcell.readthedocs.io/)
 
-Welcome to an open-source DeepCell to QuPath tutorial! This document contains several scripts that when run together allow you to apply DeepCell's Mesmer model for detecting cell nuclei in QuPath. Note: you can already do this for small images via ImageJ's DeepCell plugin, but this pipeline is designed for processing whole-slide images where you have thousands of cells, that is, images that are too large to pass into ImageJ.
+Welcome to an open-source DeepCell to QuPath tutorial! This document contains several scripts that when run together allow you to apply DeepCell's Mesmer model for detecting cell nuclei in QuPath. Note: you can already do this for small images via ImageJ's DeepCell plugin, but this pipeline is designed for processing whole-slide images where you have tens of thousands or hundreds of thousands of cells, that is, images that are too large to pass into ImageJ.
 
 Shoutout to the [Image.SC Forum](https://forum.image.sc/), especially Pete Bankhead, for helping me with figuring this out!
 
