@@ -29,7 +29,7 @@ Note: if your fluorescence image is already in the right format for QuPath to re
 
 2. The CODEX outputted tiff doesn't have the required metadata for QuPath to recognize the channels. Therefore, do the following:
 
-   - Open the CODEX tiff in QuPath. It should be monochrome as of now. Then open (step-0.groovy)[step-0.groovy] using Scripts --> Open Script Editor --> File --> Open.
+   - Open the CODEX tiff in QuPath. It should be monochrome as of now. Then open [step-0.groovy](step-0.groovy) using Scripts --> Open Script Editor --> File --> Open.
 
    - Run the groovy script and save the ome tiff.
 
@@ -39,9 +39,9 @@ DeepCell's Mesmer deep learning model is specifically designed to segment cells 
 
 The default configuration of this pipeline assumes there is no cytoplasmic channel in your image.
 
-The following step will require at least 75 GB of RAM. You may choose to run it in Google Colab Pro (in which case use (step-1-colab.ipynb)[step-1-colab.ipynb]) or on a suitable server or desktop.
+The following step will require at least 75 GB of RAM. You may choose to run it in Google Colab Pro (in which case use [step-1-colab.ipynb](step-1-colab.ipynb)) or on a suitable server or desktop.
 
-1. Open (step-1.ipynb)[step-1.ipynb] and modify the file path to be that of your ome tiff.
+1. Open [step-1.ipynb](step-1.ipynb) and modify the file path to be that of your ome tiff.
 
 2. Run the notebook. It should save a new tiff image `ome_mask_2D.tif` that is an instance segmentation mask of your image's DAPI.
 
@@ -51,7 +51,7 @@ Note: there are optional cells containing code for visualization of the masks. Y
 
 In the future, if `paquo` implements an `add_cellObject()` method, this current setup may be updated.
 
-1. Open (step-2.ipynb)[step-2.ipynb] on your desktop (or wherever you have QuPath installed).
+1. Open [step-2.ipynb](step-2.ipynb) on your desktop (or wherever you have QuPath installed).
 
 2. Make sure you have necessary Python dependencies installed via `pip install -r requirements.txt`
 
@@ -61,7 +61,7 @@ In the future, if `paquo` implements an `add_cellObject()` method, this current 
 
 ### Step 3: Convert the PathDetectionObjects into PathCellObjects
 
-Note: if you do not care about creating pseudo-cytoplasms for your cells, you may skip this step or modify (step-3.groovy)[step-3.groovy] simply to perform measurements.
+Note: if you do not care about creating pseudo-cytoplasms for your cells, you may skip this step or modify [step-3.groovy](step-3.groovy) simply to perform measurements.
 
 This is by far the most time-consuming step as it can take an hour or so for QuPath to generate cytoplasms for the DAPI using Voronoi tessellation on an image with ~20,000 DAPI.
 
@@ -69,7 +69,7 @@ The point of creating the pseudo-cytoplasms is to have a rough estimate of what 
 
 1. Open the QuPath project you created in the previous step
 
-2. Open the (step-3.groovy)[step-3.groovy] via Scripts --> Open Script Editor --> File --> Open and run.
+2. Open the [step-3.groovy](step-3.groovy) via Scripts --> Open Script Editor --> File --> Open and run.
 
 3. Wait for about an hour as it uses Voronoi tessellation to generate a cytoplasm for each nuclei and make measurements of shape and marker intensities within the ROI regions.
 
