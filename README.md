@@ -7,7 +7,7 @@
 [![paquo](https://img.shields.io/badge/PAQUO-0.7.1-purple)](https://paquo.readthedocs.io/)
 [![deepcell-tf](https://img.shields.io/badge/DeepCell-0.12.9-green)](https://deepcell.readthedocs.io/)
 
-Welcome to the open-source DeepCell to QuPath tutorial! This is a living document where I've gathered and written several scripts that when run together allows you to employ DeepCell's Mesmer model for detecting cell nuclei in QuPath.
+Welcome to the open-source DeepCell to QuPath tutorial! This is document contains several scripts that when run together allows you to apply DeepCell's Mesmer model for detecting cell nuclei in QuPath.
 
 Shoutout to the [Image.SC Forum](https://forum.image.sc/), especially Pete Bankhead, for helping me with figuring this out!
 
