@@ -22,11 +22,11 @@ Using this pipeline will convert Mesmer-generated instance segmentation masks of
 Prerequisites: desktop version of QuPath installed
 
 Time Estimate for standard CODEX-output with ~20k cells: 1 hour 22 minutes
-0) 2 minutes
-1) 17 minutes
-2) 2 minutes
-3) 60 minutes
-4) 1 minute
+- Step 0: 2 minutes
+- Step 1: 17 minutes
+- Step 2: 2 minutes
+- Step 3: 60 minutes
+- Step 4: 1 minute
 
 
 ### Step 0: Image Pre-Processing
