@@ -21,6 +21,14 @@ Using this pipeline will convert Mesmer-generated instance segmentation masks of
 
 Prerequisites: desktop version of QuPath installed
 
+Time Estimate for standard CODEX-output with ~20k cells: 1 hour 22 minutes
+0) 2 minutes
+1) 17 minutes
+2) 2 minutes
+3) 60 minutes
+4) 1 minute
+
+
 ### Step 0: Image Pre-Processing
 
 Note: if your fluorescence image is already in the right format for QuPath to read and understand, you may skip this step.
