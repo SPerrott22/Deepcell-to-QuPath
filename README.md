@@ -15,7 +15,7 @@
 
 Welcome to an open-source DeepCell to QuPath tutorial! This document contains several scripts that when run together allow you to apply DeepCell's Mesmer model for detecting cell nuclei in QuPath. Note: you can already do this for small cropped images via ImageJ's DeepCell plugin, but this pipeline is designed for processing whole-slide images where you have tens of thousands or hundreds of thousands of cells, that is, images that are too large to pass into ImageJ. Moreover, this pipeline also generates pseudo-cytoplasms for your nuclei so that you can have a better estimate of marker intensities per cell to do cell classification.
 
-Shoutout to the [Image.SC Forum](https://forum.image.sc/), especially Pete Bankhead, for helping me with figuring this out!
+Shoutout to the [Image.SC Forum](https://forum.image.sc/), especially [Dr. Pete Bankhead](https://www.ed.ac.uk/pathology/people/staff-students/peter-bankhead), for helping me with figuring this out!
 
 ## Description
 
@@ -133,7 +133,7 @@ Example of neighborhood analysis to be added.
 
 This pipeline was put together as part of my research under [Professor Willy Hugo](https://www.uclahealth.org/cancer/members/willy-hugo) at UCLA Health.
 
-Sincere appreciation for the support of the Image.SC Forum, especially Pete Bankhead for helping write some of these scripts and answering key questions about how to work with QuPath's scripting interface!
+Sincere appreciation for the support of the Image.SC Forum, especially Dr. Pete Bankhead for helping write some of these scripts and answering key questions about how to work with QuPath's scripting interface!
 
 Last Updated: February 10, 2024
 
