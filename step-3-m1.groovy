@@ -49,3 +49,4 @@ cells.parallelStream().forEach { cell ->
 }
 
 fireHierarchyUpdate()
+println("Done!")
