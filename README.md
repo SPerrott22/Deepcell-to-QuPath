@@ -55,9 +55,17 @@ The following step will require at least 75 GB of RAM. You may choose to run it 
 
 Note: there are optional cells containing code for visualization of the masks. You can uncomment lines and adjust image slices to display channels you want to visualize as well as the mask overlay.
 
-### Step 2: Converting Masks Into QuPath PathDetectionObjects
+# Step 2: Pseudo-Cytoplasm Generation and Transferral to QuPath
 
-In the future, if `paquo` implements an `add_cellObject()` method, this current setup may be updated.
+Note: In the future, if `paquo` API implements an `add_cellObject()` method, this current setup may be updated to require fewer scripts. Regardless, the 1-hour bottleneck is caused by measurements for every cell in QuPath.
+
+Comparison of both methods:
+
+
+---
+## Method 1: Voronoi Tessellation in Groovy
+
+### Converting Masks Into QuPath PathDetectionObjects
 
 1. Open [step-2.ipynb](step-2.ipynb) on your desktop (or wherever you have QuPath installed).
 
@@ -67,11 +75,11 @@ In the future, if `paquo` implements an `add_cellObject()` method, this current 
 
 4. Run the cells (3 minutes or so for ~20,000 DAPI). This automatically creates a new QuPath project in the specified folder and adds the DAPI masks as detection objects to your fluorescence image.
 
-### Step 3: Convert the PathDetectionObjects into PathCellObjects
+### Convert the PathDetectionObjects into PathCellObjects
 
 Note: if you do not care about creating pseudo-cytoplasms for your cells, you may skip this step or modify [step-3.groovy](step-3.groovy) simply to perform measurements.
 
-This is by far the most time-consuming step as it can take an hour or so for QuPath to generate cytoplasms for the DAPI using Voronoi tessellation on an image with ~20,000 DAPI.
+This is by far the most time-consuming step as it can take an hour or so for QuPath to do measurments per cell on an image with ~20,000 DAPI.
 
 The point of creating the pseudo-cytoplasms is to have a rough estimate of what the cytoplasms should be given that we have no cytoplasmic marker. This can help us with cell classification downstream as it is easier for markers to be assigned to cells.
 
@@ -80,6 +88,20 @@ The point of creating the pseudo-cytoplasms is to have a rough estimate of what 
 2. Open the [step-3.groovy](step-3.groovy) via Scripts --> Open Script Editor --> File --> Open and run.
 
 3. Wait for about an hour as it uses Voronoi tessellation to generate a cytoplasm for each nuclei and make measurements of shape and marker intensities within the ROI regions.
+
+---
+
+## Method 2: Cell Expansion in Python
+
+If you would rather do cell expansion in Python instead of relying on Groovy's Voronoi tessellation, proceed with the following:
+
+1. On a server with high compute resources, generate the cytoplasms with step-3a.ipynb and save the numpy array instance labels for both your DAPI and Cytoplasms to your local computer where QuPath is installed.
+
+2. Run masks-to-QuPath.ipynb with the correct file path names to add both the cytoplasms and nuclei as detection objects to a new QuPath project.
+
+3. Run split-cells.groovy to convert these detections into cellObjects and generate measurements.
+
+---
 
 ### Step 4: Proceed to Do Cell Classification, Neighborhood Analysis, Visualization, etc.
 
