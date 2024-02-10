@@ -73,7 +73,9 @@ Note: In the future, if `paquo` API implements an `add_cellObject()` method, thi
 
 The below two methods take a similar amount of time. The primary bottleneck is generating measurements for each cell which is done in QuPath in both methods. For more customizability, one may prefer to use Python's cell expansion in Method 2. For slightly smoother cytoplasm boundaries, one might prefer QuPath's built-in groovy cell expansion in Method 1.
 
-<center> <strong> Figure 2: Comparison of both methods: </strong> </center>
+<p align="center">
+ <strong> Figure 2: Comparison of both methods: </strong>
+</p>
 
 |      ![](./assets/groovy-cytoplasms.png)      |       ![](./assets/python-cytoplasms.png)       |
 | :-------------------------------------------: | :---------------------------------------------: |
