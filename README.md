@@ -121,11 +121,13 @@ If you would rather use the `cytplasms.npy` we created in Python in step 1 inste
 
 ### Step 4: Proceed to Do Cell Classification, Neighborhood Analysis, Visualization, etc.
 
-Now your CellObjects should look just as if they were created via StarDist but they used DeepCell instead! You can proceed to train a cell classification model in QuPath or you can save the .csv representing your cells and their measurements and read in the data to Python/R/MATLAB to perform your own neighborhood analysis.
+Now your CellObjects should look just as if they were created via StarDist but they used DeepCell instead! You can proceed to train a cell classification model in QuPath or you can save the .txt, .tsv, or .csv representing your cells and their measurements and read in the data to Python/R/MATLAB to perform your own neighborhood analysis.
 
 To export measurements from QuPath:
 
-- Go to Measurements --> Export as CSV
+- Go to Measure --> Select "Cells" --> Export as CSV
+
+See [How To Export Measurements](https://qupath.readthedocs.io/en/stable/docs/tutorials/exporting_measurements.html) for more examples of how to do this.
 
 Example of neighborhood analysis to be added.
 
