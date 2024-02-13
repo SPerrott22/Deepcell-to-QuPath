@@ -24,7 +24,7 @@ double pixelSize = getCurrentImageData().getServer().getPixelCalibration().getAv
 println("Extracting ROIs...")
 def detections = getDetectionObjects() // .findAll {d -> !d.isCell()}
 
-println("Creating cells with cytoplasms generated via Voronoi...")
+println("Creating cells with cytoplasms generated via Voronoi...") // takes about 20 minutes
 def cells = CellTools.detectionsToCells(detections, 10, -1)
 /*
 `detections` - the detection objects from which to create the cells; these define the nuclei
