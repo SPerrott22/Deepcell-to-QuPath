@@ -10,7 +10,7 @@
 <p align="center">
   <img src="./assets/title-image.png" alt="Example Result" width="60%"/>
   <br>
-  <em>Figure 1: Example Result</em>
+  <em>Figure 0: Example Result</em>
 </p>
 
 Welcome to an open-source DeepCell to QuPath tutorial! This document contains several scripts that when run together allow you to apply DeepCell's Mesmer model for detecting cell nuclei in QuPath. Note: you can already do this for small cropped images via ImageJ's DeepCell plugin, but this pipeline is designed for processing whole-slide images where you have tens of thousands or hundreds of thousands of cells, that is, images that are too large to pass into ImageJ. Moreover, this pipeline also generates pseudo-cytoplasms for your nuclei so that you can have a better estimate of marker intensities per cell to do cell classification.
@@ -21,7 +21,13 @@ Shoutout to the [Image.SC Forum](https://forum.image.sc/), especially [Dr. Pete 
 
 This pipeline connects a deep-learning powered cell segmentation model to open-source software that can perform neighborhood analysis and clustering.
 
-Using this pipeline will convert Mesmer-generated instance segmentation masks of nuclei from a fluorescence ome-tiff to PathCellObjects in QuPath with auto-generated cytoplasms, from which a csv containing x/y coordinates and marker intensities per cell can be readily downloaded via QuPath's user interface. In other words, it is like using QuPath's StarDist plugin but with a deep learning model.
+Using this pipeline will convert Mesmer-generated instance segmentation masks of nuclei from a fluorescence ome-tiff to PathCellObjects in QuPath with auto-generated cytoplasms, from which a csv containing x/y coordinates and marker intensities per cell can be readily downloaded via QuPath's user interface. In other words, it is like using QuPath's StarDist plugin but with a deep learning model. It also avoids some of StarDist's commonly encountered issues such as the below false positives when parameters are made more sensitive (upping the threshold leads to cells that DeepCell would classify being ignored by StarDist):
+
+<p align="center">
+  <img src="./assets/stardist-issues.png" alt="False Positives" width="60%"/>
+  <br>
+  <em>Figure 1: Issues with StarDist's One-Size Fits All Parameter Tuning</em>
+</p>
 
 ## How To Use
 
@@ -84,7 +90,7 @@ The below two methods take a similar amount of time. The primary bottleneck is g
 
 
 <p align="center">
-  <img src="./assets/finetuned-stardist.png" alt="Stardist Cell Expansion" width="60%"/>
+  <img src="./assets/stardist-output.png" alt="Stardist Cell Expansion" width="60%"/>
   <br>
   <em>Figure 3: StarDist Nuclei Detection and Cell Expansion</em>
 </p>
