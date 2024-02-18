@@ -73,16 +73,18 @@ Note: In the future, if `paquo` API implements an `add_cellObject()` method, thi
 
 The below two methods take a similar amount of time. The primary bottleneck is generating measurements for each cell which is done in QuPath in both methods. For more customizability, one may prefer to use Python's cell expansion in Method 2. For slightly smoother cytoplasm boundaries, one might prefer QuPath's built-in groovy cell expansion in Method 1.
 
-<p align="center">
- <strong> Figure 2: Comparison of both methods </strong>
-</p>
 
 |      ![](./assets/groovy-cytoplasms.png)      |       ![](./assets/python-cytoplasms.png)       |
 | :-------------------------------------------: | :---------------------------------------------: |
 | a. Cytoplasms Generated via Voronoi in Groovy | b. Cytoplasms Generated via Watershed in Python |
 
 <p align="center">
-  <img src="./assets/stardist-cells.png" alt="Stardist Cell Expansion" width="60%"/>
+ <em> Figure 2: Comparison of both methods </em>
+</p>
+
+
+<p align="center">
+  <img src="./assets/stardist-cytoplasms.png" alt="Stardist Cell Expansion" width="60%"/>
   <br>
   <em>Figure 3: StarDist Nuclei Detection and Cell Expansion</em>
 </p>
