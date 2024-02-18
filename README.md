@@ -84,7 +84,7 @@ The below two methods take a similar amount of time. The primary bottleneck is g
 
 
 <p align="center">
-  <img src="./assets/stardist-cytoplasms.png" alt="Stardist Cell Expansion" width="60%"/>
+  <img src="./assets/stardist-expansion.png" alt="Stardist Cell Expansion" width="60%"/>
   <br>
   <em>Figure 3: StarDist Nuclei Detection and Cell Expansion</em>
 </p>
