@@ -34,7 +34,7 @@ conda deep2q create -f environment.yml
 conda activate deep2q
 ```
 
-Time Estimate for standard CODEX-output with ~20k cells: 1 hour 40 minutes
+Time Estimate for standard CODEX-output with ~20k cells: 1 hour 40 minutes. Compare to [StarDist](finetuned-stardist.groovy) 2 hours 26 minutes.
 
 - Step 0: 2 minutes
 - Step 1: 17 minutes
