@@ -21,12 +21,12 @@ Shoutout to the [Image.SC Forum](https://forum.image.sc/), especially [Dr. Pete 
 
 This pipeline connects a deep-learning powered cell segmentation model to open-source software that can perform neighborhood analysis and clustering.
 
-Using this pipeline will convert Mesmer-generated instance segmentation masks of nuclei from a fluorescence ome-tiff to PathCellObjects in QuPath with auto-generated cytoplasms, from which a csv containing x/y coordinates and marker intensities per cell can be readily downloaded via QuPath's user interface. In other words, it is like using QuPath's StarDist plugin but with a deep learning model. It also avoids some of StarDist's commonly encountered issues such as the below false positives when parameters are made more sensitive (upping the threshold leads to cells that DeepCell would classify being ignored by StarDist):
+Using this pipeline will convert Mesmer-generated instance segmentation masks of nuclei from a fluorescence ome-tiff to PathCellObjects in QuPath with auto-generated cytoplasms, from which a csv containing x/y coordinates and marker intensities per cell can be readily downloaded via QuPath's user interface. In other words, it is like using QuPath's StarDist plugin but with DeepCell, which generally performs better. It also avoids some of StarDist's commonly encountered issues such as the below false positives when parameters are made more sensitive (upping the threshold leads to cells that DeepCell would classify being ignored by StarDist):
 
 <p align="center">
   <img src="./assets/stardist-issues.png" alt="False Positives" width="60%"/>
   <br>
-  <em>Figure 1: Issues with StarDist's One-Size Fits All Parameter Tuning</em>
+  <em>Figure 1: Issues with StarDist</em>
 </p>
 
 ## How To Use
