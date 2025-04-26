@@ -36,7 +36,7 @@ Prerequisites: desktop version of QuPath installed
 Recommended: to avoid dependency issues, do everything in the provided conda environment
 
 ```shell
-conda deep2q create -f environment.yml
+conda env create -f environment.yml -n deep2q
 conda activate deep2q
 ```
 
